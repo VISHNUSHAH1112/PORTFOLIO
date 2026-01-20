@@ -21,6 +21,5 @@ Built with **React** and **Tailwind CSS** for a modern, responsive, and clean de
 
 ## About Me
 
-I am a frontend developer passionate about building clean and user-friendly web experiences.  
-Currently learning advanced React and exploring full-stack development.
+I am a frontend developer passionate about building clean and user-friendly 
 
