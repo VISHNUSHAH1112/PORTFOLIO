@@ -1,0 +1,335 @@
+.btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.neon-pulse {
+    background: #ffffff;
+    color: black;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid #0ff;
+    border-radius: inherit;
+    animation: pulseOut 2s ease-out infinite;
+    opacity: 0;
+}
+
+.neon-pulse::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+.btn-wobble {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    transition: 4s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.btn-wobble:hover {
+    transform: perspective(1000px) rotateX(360deg);
+}
+
+.btn-wobble span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: rgba(16, 24, 40, 0.9);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    box-shadow: insert 0 20px 50px rgba(255, 255, 255, 0.2);
+}
+
+.btn-wobble:hover span {
+    color: #fff;
+    background: rgba(3, 169, 244, 0.8);
+}
+
+.btn-wobble span:nth-child(1) {
+    transform: rotateX(360deg) translateZ(25px);
+}
+
+.btn-wobble span:nth-child(2) {
+    transform: rotateX(270deg) translateZ(25px);
+}
+
+.btn-wobble span:nth-child(3) {
+    transform: rotateX(180deg) translateZ(25px);
+}
+
+.btn-wobble span:nth-child(4) {
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #60a5fa !important;
+    /* blue-400 */
+}
+
+html {
+    scroll-behavior: smooth !important;
+    /* Safari aur purane browsers ke liye */
+    scroll-padding-top: 80px;
+    /* Agar aapka navbar fixed hai toh ye zaruri hai taaki heading na chupe */
+}
+
+/* Optional: Scrollbar ko bhi thoda stylish bana sakte hain */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+}
+
+/* body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+} */
+/* Typography */
+.fw-black {
+    font-weight: 900;
+}
+
+.tracking-tighter {
+    letter-spacing: -3px;
+}
+
+.tracking-widest {
+    letter-spacing: 3px;
+}
+
+/* Outline Text Effect */
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+
+.text-outline:hover {
+    color: #0d6efd;
+    -webkit-text-stroke: 1px #0d6efd;
+}
+
+/* Status Dot Pulse */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #198754;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(25, 135, 84, 0.4);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(25, 135, 84, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(25, 135, 84, 0);
+    }
+}
+
+/* Social Glass Cards */
+.social-card {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.social-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px) rotate(8deg);
+}
+
+.insta-hover:hover {
+    color: #e1306c;
+    border-color: #e1306c;
+}
+
+.linkedin-hover:hover {
+    color: #0077b5;
+    border-color: #0077b5;
+}
+
+.github-hover:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Back to Top Button */
+.btn-back-to-top {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-back-to-top:hover {
+    color: white;
+    letter-spacing: 4px;
+}
+
+/* /'footer' */
+/* Footer Section */
+.footer-section {
+    background: #0b0b0b;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo */
+.footer-logo {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Text */
+.footer-text {
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Social Icons */
+.social-link {
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Individual hover colors */
+.social-link.insta:hover {
+    color: #e1306c;
+}
+
+.social-link.linkedin:hover {
+    color: #0a66c2;
+}
+
+.social-link.github:hover {
+    color: #ffffff;
+}
+
+/* Bottom Section */
+.footer-built-with {
+    letter-spacing: 0.5px;
+}
+
+/* Pulse Animation */
+.animation-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .footer-logo {
+        font-size: 1.6rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}

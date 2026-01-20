@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth !important;
+    /* Agar aapka Navbar fixed hai, toh niche wali line zaroori hai */
+    scroll-padding-top: 80px;
+}
+
+/* Footer Base */
+.container {
+    margin: auto;
+}
+
+.footer {
+    background: #101828;
+    /* color: #d1d5db; */
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: "Inter", sans-serif;
+}
+
+/* Logo */
+.footer-logo {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.footer-logo span {
+    color: #3b82f6;
+}
+
+/* Text */
+.footer-text {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #9ca3af;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Social Icons */
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-socials a {
+    font-size: 1.6rem;
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #853434;
+    transform: translateY(-4px);
+}
+
+/* Info Bar */
+.footer-info {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-socials {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+[id] {
+    scroll-margin-top: 80px;
+    /* navbar height */
+}

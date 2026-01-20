@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/resume.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyPortfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Gravitas+One&family=Inspiration&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Vithkuqi:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const originalTitle = "MyPortfolio";
+    const awayTitle = "Come Back 😢";
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        document.title = awayTitle;
+      } else {
+        document.title = originalTitle;
+      }
+    });
+
+    function showCustomAlert(message) {
+      const alertBox = document.createElement("div");
+      alertBox.innerText = message;
+      alertBox.style.position = "fixed";
+      alertBox.style.top = "20px";
+      alertBox.style.left = "50%";
+      alertBox.style.transform = "translateX(-50%)";
+      alertBox.style.background = "rgba(21,93,252,0.9)";
+      alertBox.style.color = "#fff";
+      alertBox.style.padding = "12px 20px";
+      alertBox.style.borderRadius = "8px";
+      alertBox.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+      alertBox.style.zIndex = "9999";
+      alertBox.style.fontFamily = "sans-serif";
+      alertBox.style.fontSize = "16px";
+      document.body.appendChild(alertBox);
+
+      setTimeout(() => {
+        alertBox.remove();
+      }, 2500);
+    }
+
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
