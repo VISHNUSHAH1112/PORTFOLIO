@@ -17,9 +17,7 @@ Built with **React** and **Tailwind CSS** for a modern, responsive, and clean de
 - **Icons & Animations:** React Icons, CSS animations
 - **Hosting:** GitHub Pages / Netlify (optional)
 
-## Live Demo
 
-[View Live Portfolio](https://your-username.github.io/portfolio/)
 
 ## About Me
 
